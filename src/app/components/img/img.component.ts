@@ -17,8 +17,8 @@ export class ImgComponent implements OnChanges, OnInit, AfterViewInit, OnDestroy
   @Input() alt: string = ''
   @Output() loaded = new EventEmitter<string>();
   imageDefault = './assets/images/img_avatar.png'
-  counter = 0;
-  counterFn: number | undefined;
+  /* counter = 0;
+  counterFn: number | undefined; */
   constructor() {
     //before render
     // async forbiden - run once
@@ -35,10 +35,10 @@ export class ImgComponent implements OnChanges, OnInit, AfterViewInit, OnDestroy
     // before render
     // async is permitted -- once
     console.log('ngOnInit', 'imgValue =>', this.img)
-    this.counterFn = window.setInterval(()=> {
+    /* this.counterFn = window.setInterval(()=> {
       this.counter += 1;
       console.log('run counter')
-    }, 1000)
+    }, 1000) */
   }
 
   ngAfterViewInit(): void {
@@ -50,7 +50,7 @@ export class ImgComponent implements OnChanges, OnInit, AfterViewInit, OnDestroy
   ngOnDestroy(): void {
     //component is eliminated
     console.log('ngOnDestroy', 'imgValue =>', this.img)
-    window.clearInterval(this.counterFn)
+    /* window.clearInterval(this.counterFn) */
   }
 
   imgError() {
