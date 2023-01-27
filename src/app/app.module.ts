@@ -9,6 +9,10 @@ import { ImgComponent } from './components/img/img.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductsComponent } from './components/products/products.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ReversePipe } from './pipes/reverse.pipe';
+import { TimeAgoPipe } from './pipes/time-ago.pipe';
+import { ReplaceVowelsPipe } from './pipes/replace-vowels.pipe';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -17,6 +21,10 @@ import { HeaderComponent } from './components/header/header.component';
     ProductComponent,
     ProductsComponent,
     HeaderComponent,
+    ReversePipe,
+    TimeAgoPipe,
+    ReplaceVowelsPipe,
+    HighlightDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

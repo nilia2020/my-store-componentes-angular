@@ -1,5 +1,9 @@
 <p>Cantidad: {{ myShoppingCart.length }}</p>
 <p>Precio Total: {{ total }}</p>
+<p>Today: {{ today | date : "dd/MM/yyyy" }}</p>
+<p>Birthday: {{ date | date : "dd/MM/yyyy" }}</p>
+<p>{{ "Years:" | uppercase }} {{ date | timeAgo }}</p>
+<p></p>
 
 <div class="products--grid">
   <app-product
